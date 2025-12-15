@@ -330,12 +330,7 @@ Full multi-agent trading simulation (4 traders + researcher).
 
 ---
 
-#  How to Run the System
 
-### **1. Create Python environment**
-```bash
-uv venv
-source .venv/bin/activate
 ```
 
 # Gradio Dashboard

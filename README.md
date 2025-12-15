@@ -80,12 +80,13 @@ Includes:
 ├── templates.py
 ├── tracers.py
 ├── util.py
-├── app.py (Gradio UI)
-├── 1.ipynb – Intro MCP servers
-├── 2.ipynb – Custom MCP server + client
-├── 3.ipynb – Advanced MCP + Polygon.io
-├── 4.ipynb – Autonomous trading example
-├── 5.ipynb – Multi-agent trading simulation
+├── app.py                 # Gradio UI
+├── 1.ipynb                # Intro MCP servers
+├── 2.ipynb                # Custom MCP server + client
+├── 3.ipynb                # Advanced MCP + Polygon.io
+├── 4.ipynb                # Autonomous trading example
+└── 5.ipynb                # Multi-agent trading simulation
+
 
 
 🏗️ Architecture Diagram
@@ -222,9 +223,8 @@ Placeholder for screenshots:
 
 ## File Structure (Explained)
 
-6_mcp/
-│
-├── 1.ipynb               # Intro: basic MCP usage with files, playwright, fetch
+MCP/
+├── 1.ipynb               # Intro: MCP usage with files, playwright, fetch
 ├── 2.ipynb               # Custom MCP server for accounts + MCP client
 ├── 3.ipynb               # Memory server, Brave search, Polygon API tests
 ├── 4.ipynb               # Trader + Researcher agents orchestrated
@@ -374,34 +374,27 @@ Add caching layer for market snapshots
 
 Deploy as cloud-based trading simulation
 
-🏁 Summary
+---
 
-This project demonstrates:
-
-Real MCP server integration
-
-Multi-agent autonomous reasoning
-
-Financial decision-making with memory
-
-Asset management using real API data
-
-Interactive trading dashboards
-
-Production-grade modular architecture
+# 🏁 Summary
 
 
+- Real MCP server integration  
+- Multi-agent autonomous reasoning  
+- Financial decision-making with memory  
+- Asset management using real API data  
+- Interactive trading dashboards  
+- Production-grade modular architecture  
 
-🎉 Conclusion
+---
+
+# 🎉 Conclusion
 
 This project is a complete demonstration of:
 
-Modern multi-agent systems
+- Modern multi-agent systems  
+- MCP protocol in real-world workflows  
+- Financial data pipelines  
+- Autonomous decision-making  
+- Modular server-based AI architecture  
 
-MCP protocol in real-world workflows
-
-Financial data pipelines
-
-Autonomous decision-making
-
-Modular server-based AI architecture

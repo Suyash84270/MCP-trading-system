@@ -1,10 +1,10 @@
-# 🧠 Autonomous Trading System using AI Agents + MCP Protocol  
+#  Autonomous Trading System using AI Agents + MCP Protocol  
 ### Built with Python, MCP Servers, Multi-Agent Architecture & Gradio Dashboard  
 **Author:** Suyash Sharma  
 
 ---
 
-## 📌 Overview
+##  Overview
 
 This project implements a **fully autonomous multi-agent trading system** powered by:
 
@@ -30,9 +30,9 @@ This README explains **every part of the system**, so anyone can understand and 
 
 ---
 
-# 🚀 Features
+#  Features
 
-### 🧩 1. **Autonomous Trading Agents**
+###  1. **Autonomous Trading Agents**
 Each trader:
 - Reacts to market data  
 - Researches news  
@@ -41,7 +41,7 @@ Each trader:
 - Adjusts strategy over time  
 - Evaluates profit/loss  
 
-### 🔍 2. **Research Agent**
+###  2. **Research Agent**
 Searches the web using:
 - Brave Search MCP server  
 - Fetch MCP server  
@@ -49,12 +49,12 @@ Searches the web using:
 
 Produces structured financial insights.
 
-### 💰 3. **Financial Market Data**
+###  3. **Financial Market Data**
 Supports:
 - Polygon.io (real-time or free EOD API)  
 - Local fallback simulation if API rate limits  
 
-### 🧾 4. **Account & Portfolio System**
+###  4. **Account & Portfolio System**
 Includes:
 - Buy/Sell logic  
 - Balance management  
@@ -64,9 +64,10 @@ Includes:
 
 ---
 
-# 🏗️ Project Architecture
+#  Project Architecture
 
-📦 project/
+```
+project/
 ├── accounts.py
 ├── accounts_server.py
 ├── accounts_client.py
@@ -80,16 +81,18 @@ Includes:
 ├── templates.py
 ├── tracers.py
 ├── util.py
-├── app.py                 # Gradio UI
-├── 1.ipynb                # Intro MCP servers
-├── 2.ipynb                # Custom MCP server + client
-├── 3.ipynb                # Advanced MCP + Polygon.io
-├── 4.ipynb                # Autonomous trading example
-└── 5.ipynb                # Multi-agent trading simulation
+├── app.py                # Gradio UI
+│
+├── 1.ipynb               # Intro MCP servers
+├── 2.ipynb               # Custom MCP server + client
+├── 3.ipynb               # Advanced MCP + Polygon.io
+├── 4.ipynb               # Autonomous trading example
+└── 5.ipynb               # Multi-agent trading simulation
+```
 
+---
 
-
-🏗️ Architecture Diagram
+ Architecture Diagram
 
                          ┌──────────────────────────┐
                          │     Gradio Dashboard     │
@@ -124,9 +127,9 @@ Includes:
 
 ---
 
-# 🧩 Core Components Explained
+#  Core Components Explained
 
-## 1️⃣ MCP Servers
+## 1️ MCP Servers
 
 The system uses **five MCP servers**:
 
@@ -142,7 +145,7 @@ These run **locally** but behave as **external services**, accessed through `MCP
 
 ---
 
-## 2️⃣ Agents System
+## 2️ Agents System
 
 Agents use the **OpenAI Agents Framework**:
 
@@ -154,13 +157,13 @@ Each Agent has:
 
 Agents include:
 
-### ✔️ Researcher Agent
+###  Researcher Agent
 - Performs web research  
 - Summarizes insights  
 - Stores memory in libsql  
 - Provides a general-purpose research tool  
 
-### ✔️ Trader Agents (Warren, George, Ray, Cathie)
+###  Trader Agents (Warren, George, Ray, Cathie)
 Each trader has:
 - A unique personality-driven strategy  
 - Access to research tools  
@@ -175,7 +178,7 @@ They autonomously:
 
 ---
 
-## 3️⃣ Accounts System
+## 3️ Accounts System
 
 In **accounts.py**, each account stores:
 
@@ -194,7 +197,7 @@ Includes key functions:
 
 ---
 
-## 4️⃣ Market Data System
+## 4️ Market Data System
 
 In `market.py`:
 
@@ -205,7 +208,7 @@ Caching avoids rate limits.
 
 ---
 
-## 5️⃣ Gradio Dashboard (Trading UI)
+## 5️ Gradio Dashboard (Trading UI)
 
 The dashboard displays:
 
@@ -221,43 +224,43 @@ Placeholder for screenshots:
 
 [INSERT SCREENSHOT 2 HERE — Trader Portfolio View]
 
-## File Structure (Explained)
+#  File Structure
 
+```
 MCP/
-├── 1.ipynb               # Intro: MCP usage with files, playwright, fetch
-├── 2.ipynb               # Custom MCP server for accounts + MCP client
-├── 3.ipynb               # Memory server, Brave search, Polygon API tests
-├── 4.ipynb               # Trader + Researcher agents orchestrated
-├── 5.ipynb               # Multi-trader system setup
+├── 1.ipynb               # Intro: basic MCP usage with files, playwright, fetch  
+├── 2.ipynb               # Custom MCP server + account MCP client  
+├── 3.ipynb               # Memory server, Brave search, Polygon API tests  
+├── 4.ipynb               # Trader + Researcher orchestration  
+├── 5.ipynb               # Multi-trader system setup  
 │
-├── accounts.py           # Account model + buy/sell logic
-├── accounts_server.py    # MCP server exposing account functions
-├── accounts_client.py    # MCP client wrapper
+├── accounts.py           # Account model + buy/sell logic  
+├── accounts_server.py    # MCP server exposing account functions  
+├── accounts_client.py    # MCP client wrapper  
 │
-├── market.py             # Price fetching + caching
-├── market_server.py      # MCP server exposing market price lookup
+├── market.py             # Price fetching + caching  
+├── market_server.py      # MCP server exposing market price lookup  
 │
-├── traders.py            # Trader logic: decision-making + running
-├── trading_floor.py      # Runs all traders every N minutes
+├── traders.py            # Trader logic: decision-making & execution  
+├── trading_floor.py      # Runs all traders every N minutes  
 │
-├── templates.py          # Dynamic instructions for agents
-├── tracers.py            # Logging + trace tracking
+├── templates.py          # Dynamic prompt instructions for agents  
+├── tracers.py            # Logging + trace tracking  
 │
-├── push_server.py        # Push notification server
-├── reset.py              # Reset trader portfolios & strategies
+├── push_server.py        # Push notification server  
+├── reset.py              # Reset trader portfolios & strategies  
 │
-├── app.py                # Gradio dashboard UI
-├── util.py               # CSS, JS & helpers
+├── app.py                # Gradio trading dashboard UI  
+├── util.py               # CSS, JS & helpers  
 │
-└── memory/               # Persistent memory DBs for each trader
-
-
+└── memory/               # Persistent memory DBs for traders  
+```
 
 ---
 
-# ⚙️ How the Autonomous System Works
+#  How the Autonomous System Works
 
-## 🔄 1. The Scheduler (trading_floor.py)
+##  1. The Scheduler (trading_floor.py)
 Runs every N minutes (default 60):
 
 - Checks market open/closed  
@@ -267,7 +270,7 @@ Runs every N minutes (default 60):
 
 ---
 
-## 🧠 2. When a Trader Runs
+##  2. When a Trader Runs
 
 The trader:
 
@@ -283,22 +286,22 @@ The trader:
 
 ---
 
-# 📊 Gradio UI Explained
+#  Gradio UI Explained
 
 The UI (app.py) displays:
 
-### ✔️ Trader Name & Strategy  
-### ✔️ Real-time Portfolio Value  
-### ✔️ Auto-updating Line Chart  
-### ✔️ Holdings Table  
-### ✔️ Recent Transactions  
-### ✔️ Activity / Trace Logs  
+###  Trader Name & Strategy  
+###  Real-time Portfolio Value  
+###  Auto-updating Line Chart  
+###  Holdings Table  
+###  Recent Transactions  
+###  Activity / Trace Logs  
 
 The UI refreshes automatically using **Gradio timers**.
 
 ---
 
-# 🧪 Notebooks Included
+#  Notebooks Included
 
 ### `1.ipynb`  
 Intro to MCP servers: Fetch, Playwright, Filesystem, Memory.
@@ -317,7 +320,7 @@ Full multi-agent trading simulation (4 traders + researcher).
 
 ---
 
-# 📦 Requirements
+#  Requirements
 
 - Python 3.10+  
 - Node.js + NVM  
@@ -327,7 +330,7 @@ Full multi-agent trading simulation (4 traders + researcher).
 
 ---
 
-# ▶️ How to Run the System
+#  How to Run the System
 
 ### **1. Create Python environment**
 ```bash
@@ -335,7 +338,7 @@ uv venv
 source .venv/bin/activate
 ```
 
-🎛️ Gradio Dashboard
+# Gradio Dashboard
 
 Shows real-time:
 
@@ -350,21 +353,21 @@ Logs (highlighted by event type)
 Time-series portfolio chart
 
 
-🖼️ Placeholders for Screenshots
+# Placeholders for Screenshots
 
 
 
-📌 Screenshot 1 — Dashboard Overview
+Screenshot 1 — Dashboard Overview
 ![Dashboard Overview](path/to/screenshot1.png)
 
-📌 Screenshot 2 — Trader Details View
+Screenshot 2 — Trader Details View
 ![Trader Details](path/to/screenshot2.png)
 
 
 
+---
 
-
-📈 Future Improvements
+# Future Improvements
 
 Add LLM-based reinforcement learning
 
@@ -376,7 +379,9 @@ Deploy as cloud-based trading simulation
 
 ---
 
-# 🏁 Summary
+---
+
+#  Summary
 
 
 - Real MCP server integration  
@@ -388,7 +393,7 @@ Deploy as cloud-based trading simulation
 
 ---
 
-# 🎉 Conclusion
+#  Conclusion
 
 This project is a complete demonstration of:
 

@@ -347,6 +347,8 @@ Logs (highlighted by event type)
 
 Time-series portfolio chart
 
+---
+
 
 # Placeholders for Screenshots
 

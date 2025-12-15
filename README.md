@@ -330,24 +330,19 @@ Full multi-agent trading simulation (4 traders + researcher).
 
 ---
 
+##  Gradio Dashboard
 
-```
+The dashboard shows real-time:
 
-# Gradio Dashboard
-
-Shows real-time:
-
-Portfolio Value & PnL
-
-Holdings table
-
-Transactions table
-
-Logs (highlighted by event type)
-
-Time-series portfolio chart
+- **Portfolio Value & PnL**
+- **Holdings table**
+- **Transactions table**
+- **Logs** (highlighted by event type)
+- **Time-series portfolio chart**
 
 ---
+
+
 
 
 # Placeholders for Screenshots

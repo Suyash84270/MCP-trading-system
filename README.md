@@ -349,12 +349,11 @@ The dashboard shows real-time:
 
 
 
-Screenshot 1 — Dashboard Overview
-![Dashboard Overview](path/to/screenshot1.png)
+###  Screenshot 1 — Dashboard Overview
+![Dashboard Overview](https://github.com/Suyash84270/MCP-trading-system/blob/main/dashboard_overview.png.png?raw=true)
 
-Screenshot 2 — Trader Details View
-![Trader Details](path/to/screenshot2.png)
-
+###  Screenshot 2 — Trader Details View
+![Trader Details](https://github.com/Suyash84270/MCP-trading-system/blob/main/trader_details.png.png?raw=true)
 
 
 ---
